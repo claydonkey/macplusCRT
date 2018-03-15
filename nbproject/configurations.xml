@@ -1,0 +1,456 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="97">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <logicalFolder name="HeaderFiles"
+                   displayName="Header Files"
+                   projectFiles="true">
+    </logicalFolder>
+    <logicalFolder name="ResourceFiles"
+                   displayName="Resource Files"
+                   projectFiles="true">
+      <itemPath>cape-bone-mac.dts</itemPath>
+      <itemPath>macboard.brd</itemPath>
+      <itemPath>macboard.sch</itemPath>
+      <itemPath>am335x/pasm/macvideo.p</itemPath>
+      <itemPath>start-xvfb</itemPath>
+      <itemPath>ws281x.hp</itemPath>
+      <itemPath>xorg.conf</itemPath>
+    </logicalFolder>
+    <logicalFolder name="SourceFiles"
+                   displayName="Source Files"
+                   projectFiles="true">
+      <itemPath>eventmap.c</itemPath>
+      <itemPath>macvideo.c</itemPath>
+      <itemPath>x11mac.c</itemPath>
+    </logicalFolder>
+    <logicalFolder name="TestFiles"
+                   displayName="Test Files"
+                   projectFiles="false"
+                   kind="TEST_LOGICAL_FOLDER">
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+    </logicalFolder>
+    <itemPath>nbproject/project.properties</itemPath>
+  </logicalFolder>
+  <sourceRootList>
+    <Elem>.</Elem>
+  </sourceRootList>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="eventmap" type="1">
+      <toolsSet>
+        <compilerSet>arm-linux-gnueabihf|GNU</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <developmentMode>5</developmentMode>
+          <standard>3</standard>
+          <incDir>
+            <pElem>ledscape/include</pElem>
+            <pElem>${SYSROOT}/usr/include</pElem>
+          </incDir>
+          <commandLine>--sysroot=${SYSROOT}</commandLine>
+          <preprocessorList>
+            <Elem>_DEFAULT_SOURCE</Elem>
+          </preprocessorList>
+          <warningLevel>2</warningLevel>
+        </cTool>
+        <ccTool>
+          <standard>11</standard>
+          <incDir>
+            <pElem>ledscape/include</pElem>
+            <pElem>/home/pi/arm-linux-gnueabihf/sysroot/usr/include</pElem>
+          </incDir>
+          <commandLine>--sysroot=/home/pi/arm-linux-gnueabihf/sysroot</commandLine>
+          <preprocessorList>
+            <Elem>_DEFAULT_SOURCE</Elem>
+          </preprocessorList>
+        </ccTool>
+        <linkerTool>
+          <output>${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/eventmap</output>
+          <linkerAddLib>
+            <pElem>${SYSROOT}/usr/lib</pElem>
+            <pElem>am335x/app_loader/prussdrv/dist/Release/arm-linux-gnueabihf-Linux</pElem>
+          </linkerAddLib>
+          <linkerLibItems>
+            <linkerLibProjectItem>
+              <makeArtifact PL="ledscape"
+                            CT="3"
+                            CN="Release_Static"
+                            AC="true"
+                            BL="true"
+                            WD="ledscape"
+                            BC="${MAKE}  -f Makefile CONF=Release_Static"
+                            CC="${MAKE}  -f Makefile CONF=Release_Static clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libledscape.a">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="am335x/app_loader/prussdrv"
+                            CT="3"
+                            CN="Release"
+                            AC="true"
+                            BL="true"
+                            WD="am335x/app_loader/prussdrv"
+                            BC="${MAKE}  -f Makefile CONF=Release"
+                            CC="${MAKE}  -f Makefile CONF=Release clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libprussdrv.a">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibLibItem>Xtst</linkerLibLibItem>
+            <linkerLibLibItem>X11</linkerLibLibItem>
+            <linkerLibLibItem>pthread</linkerLibLibItem>
+          </linkerLibItems>
+          <commandLine>--sysroot=${SYSROOT}</commandLine>
+        </linkerTool>
+        <requiredProjects>
+          <makeArtifact PL="ledscape"
+                        CT="3"
+                        CN="Release"
+                        AC="true"
+                        BL="true"
+                        WD="ledscape"
+                        BC="${MAKE}  -f Makefile CONF=Release"
+                        CC="${MAKE}  -f Makefile CONF=Release clean"
+                        OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libledscape.a">
+          </makeArtifact>
+          <makeArtifact PL="am335x/app_loader/prussdrv"
+                        CT="3"
+                        CN="Release"
+                        AC="true"
+                        BL="false"
+                        WD="am335x/app_loader/prussdrv"
+                        BC="${MAKE}  -f Makefile CONF=Release"
+                        CC="${MAKE}  -f Makefile CONF=Release clean"
+                        OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libprussdrv.a">
+          </makeArtifact>
+        </requiredProjects>
+      </compileType>
+      <packaging>
+        <packType>Tar</packType>
+        <packFileList>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}bin/libledscape.so"
+                            from="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libledscape.so"
+                            perm="755"
+                            owner="root"
+                            group="bin"/>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}bin/${OUTPUT_BASENAME}"
+                            from="${OUTPUT_PATH}"
+                            perm="755"
+                            owner="root"
+                            group="bin"/>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}bin/libledscape.so"
+                            from="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libledscape.so"
+                            perm="755"
+                            owner="root"
+                            group="bin"/>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}bin/${OUTPUT_BASENAME}"
+                            from="${OUTPUT_PATH}"
+                            perm="755"
+                            owner="root"
+                            group="bin"/>
+        </packFileList>
+      </packaging>
+      <item path="am335x/pasm/macvideo.p" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="cape-bone-mac.dts" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="eventmap.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="macboard.brd" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="macboard.sch" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="macvideo.c" ex="true" tool="0" flavor2="3">
+      </item>
+      <item path="nbproject/project.properties" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="start-xvfb" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ws281x.hp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="xorg.conf" ex="false" tool="3" flavor2="0">
+      </item>
+    </conf>
+    <conf name="macvideo" type="1">
+      <toolsSet>
+        <compilerSet>arm-linux-gnueabihf|GNU</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <developmentMode>5</developmentMode>
+          <standard>3</standard>
+          <incDir>
+            <pElem>ledscape/include</pElem>
+            <pElem>${SYSROOT}/usr/include</pElem>
+          </incDir>
+          <commandLine>--sysroot=${SYSROOT}</commandLine>
+          <preprocessorList>
+            <Elem>_DEFAULT_SOURCE</Elem>
+          </preprocessorList>
+          <warningLevel>2</warningLevel>
+        </cTool>
+        <ccTool>
+          <standard>11</standard>
+        </ccTool>
+        <linkerTool>
+          <output>${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/macvideo</output>
+          <linkerAddLib>
+            <pElem>${SYSROOT}/usr/lib</pElem>
+            <pElem>am335x/app_loader/prussdrv/dist/Release/arm-linux-gnueabihf-Linux</pElem>
+          </linkerAddLib>
+          <linkerLibItems>
+            <linkerLibProjectItem>
+              <makeArtifact PL="ledscape"
+                            CT="3"
+                            CN="Release_Static"
+                            AC="true"
+                            BL="true"
+                            WD="ledscape"
+                            BC="${MAKE}  -f Makefile CONF=Release_Static"
+                            CC="${MAKE}  -f Makefile CONF=Release_Static clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libledscape.a">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="am335x/app_loader/prussdrv"
+                            CT="3"
+                            CN="Release"
+                            AC="true"
+                            BL="true"
+                            WD="am335x/app_loader/prussdrv"
+                            BC="${MAKE}  -f Makefile CONF=Release"
+                            CC="${MAKE}  -f Makefile CONF=Release clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libprussdrv.a">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibLibItem>Xtst</linkerLibLibItem>
+            <linkerLibLibItem>X11</linkerLibLibItem>
+            <linkerLibLibItem>pthread</linkerLibLibItem>
+          </linkerLibItems>
+          <commandLine>--sysroot=${SYSROOT}</commandLine>
+        </linkerTool>
+        <requiredProjects>
+          <makeArtifact PL="ledscape"
+                        CT="3"
+                        CN="Release"
+                        AC="true"
+                        BL="true"
+                        WD="ledscape"
+                        BC="${MAKE}  -f Makefile CONF=Release"
+                        CC="${MAKE}  -f Makefile CONF=Release clean"
+                        OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libledscape.a">
+          </makeArtifact>
+          <makeArtifact PL="am335x/app_loader/prussdrv"
+                        CT="3"
+                        CN="Release"
+                        AC="true"
+                        BL="false"
+                        WD="am335x/app_loader/prussdrv"
+                        BC="${MAKE}  -f Makefile CONF=Release"
+                        CC="${MAKE}  -f Makefile CONF=Release clean"
+                        OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libprussdrv.a">
+          </makeArtifact>
+        </requiredProjects>
+      </compileType>
+      <packaging>
+        <packType>Tar</packType>
+        <packFileList>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}bin/libledscape.so"
+                            from="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libledscape.so"
+                            perm="755"
+                            owner="root"
+                            group="bin"/>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}bin/${OUTPUT_BASENAME}"
+                            from="${OUTPUT_PATH}"
+                            perm="755"
+                            owner="root"
+                            group="bin"/>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}bin/libledscape.so"
+                            from="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libledscape.so"
+                            perm="755"
+                            owner="root"
+                            group="bin"/>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}bin/${OUTPUT_BASENAME}"
+                            from="${OUTPUT_PATH}"
+                            perm="755"
+                            owner="root"
+                            group="bin"/>
+        </packFileList>
+      </packaging>
+      <item path="am335x/pasm/macvideo.p" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="cape-bone-mac.dts" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="eventmap.c" ex="true" tool="0" flavor2="3">
+      </item>
+      <item path="macboard.brd" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="macboard.sch" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="macvideo.c" ex="false" tool="0" flavor2="3">
+      </item>
+      <item path="nbproject/project.properties" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="start-xvfb" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ws281x.hp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="x11mac.c" ex="true" tool="0" flavor2="3">
+      </item>
+      <item path="xorg.conf" ex="false" tool="3" flavor2="0">
+      </item>
+    </conf>
+    <conf name="x11mac" type="1">
+      <toolsSet>
+        <compilerSet>arm-linux-gnueabihf|GNU</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <developmentMode>5</developmentMode>
+          <standard>3</standard>
+          <incDir>
+            <pElem>ledscape/include</pElem>
+            <pElem>${SYSROOT}/usr/include</pElem>
+          </incDir>
+          <commandLine>--sysroot=${SYSROOT}</commandLine>
+          <preprocessorList>
+            <Elem>_DEFAULT_SOURCE</Elem>
+          </preprocessorList>
+          <warningLevel>2</warningLevel>
+        </cTool>
+        <ccTool>
+          <standard>11</standard>
+        </ccTool>
+        <linkerTool>
+          <output>${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/x11mac</output>
+          <linkerAddLib>
+            <pElem>${SYSROOT}/usr/lib</pElem>
+            <pElem>am335x/app_loader/prussdrv/dist/Release/arm-linux-gnueabihf-Linux</pElem>
+          </linkerAddLib>
+          <linkerLibItems>
+            <linkerLibProjectItem>
+              <makeArtifact PL="ledscape"
+                            CT="3"
+                            CN="Release_Static"
+                            AC="true"
+                            BL="true"
+                            WD="ledscape"
+                            BC="${MAKE}  -f Makefile CONF=Release_Static"
+                            CC="${MAKE}  -f Makefile CONF=Release_Static clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libledscape.a">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="am335x/app_loader/prussdrv"
+                            CT="3"
+                            CN="Release"
+                            AC="true"
+                            BL="true"
+                            WD="am335x/app_loader/prussdrv"
+                            BC="${MAKE}  -f Makefile CONF=Release"
+                            CC="${MAKE}  -f Makefile CONF=Release clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libprussdrv.a">
+              </makeArtifact>
+            </linkerLibProjectItem>
+            <linkerLibLibItem>Xtst</linkerLibLibItem>
+            <linkerLibLibItem>X11</linkerLibLibItem>
+            <linkerLibLibItem>pthread</linkerLibLibItem>
+          </linkerLibItems>
+          <commandLine>--sysroot=${SYSROOT}</commandLine>
+        </linkerTool>
+        <requiredProjects>
+          <makeArtifact PL="ledscape"
+                        CT="3"
+                        CN="Release"
+                        AC="true"
+                        BL="true"
+                        WD="ledscape"
+                        BC="${MAKE}  -f Makefile CONF=Release"
+                        CC="${MAKE}  -f Makefile CONF=Release clean"
+                        OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libledscape.a">
+          </makeArtifact>
+          <makeArtifact PL="am335x/app_loader/prussdrv"
+                        CT="3"
+                        CN="Release"
+                        AC="true"
+                        BL="true"
+                        WD="am335x/app_loader/prussdrv"
+                        BC="${MAKE}  -f Makefile CONF=Release"
+                        CC="${MAKE}  -f Makefile CONF=Release clean"
+                        OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libprussdrv.a">
+          </makeArtifact>
+        </requiredProjects>
+      </compileType>
+      <packaging>
+        <packType>Tar</packType>
+        <packFileList>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}bin/libledscape.so"
+                            from="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libledscape.so"
+                            perm="755"
+                            owner="root"
+                            group="bin"/>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}bin/${OUTPUT_BASENAME}"
+                            from="${OUTPUT_PATH}"
+                            perm="755"
+                            owner="root"
+                            group="bin"/>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}bin/libledscape.so"
+                            from="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libledscape.so"
+                            perm="755"
+                            owner="root"
+                            group="bin"/>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}bin/${OUTPUT_BASENAME}"
+                            from="${OUTPUT_PATH}"
+                            perm="755"
+                            owner="root"
+                            group="bin"/>
+        </packFileList>
+      </packaging>
+      <item path="am335x/pasm/macvideo.p" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="cape-bone-mac.dts" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="eventmap.c" ex="true" tool="0" flavor2="3">
+      </item>
+      <item path="macboard.brd" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="macboard.sch" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="macvideo.c" ex="true" tool="0" flavor2="3">
+      </item>
+      <item path="nbproject/project.properties" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="start-xvfb" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ws281x.hp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="x11mac.c" ex="false" tool="0" flavor2="3">
+      </item>
+      <item path="xorg.conf" ex="false" tool="3" flavor2="0">
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>

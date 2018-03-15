@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="97">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <logicalFolder name="HeaderFiles"
+                   displayName="Header Files"
+                   projectFiles="true">
+      <itemPath>include/bitpattern.h</itemPath>
+      <itemPath>include/ledscape.h</itemPath>
+      <itemPath>include/pru.h</itemPath>
+      <itemPath>include/util.h</itemPath>
+      <itemPath>include/ws281x.hp</itemPath>
+    </logicalFolder>
+    <logicalFolder name="ResourceFiles"
+                   displayName="Resource Files"
+                   projectFiles="true">
+      <itemPath>resource/matrix.p</itemPath>
+      <itemPath>resource/ws281x.p</itemPath>
+    </logicalFolder>
+    <logicalFolder name="SourceFiles"
+                   displayName="Source Files"
+                   projectFiles="true">
+      <itemPath>config.c</itemPath>
+      <itemPath>fixed-font.c</itemPath>
+      <itemPath>ledscape.c</itemPath>
+      <itemPath>pru.c</itemPath>
+      <itemPath>util.c</itemPath>
+    </logicalFolder>
+    <logicalFolder name="TestFiles"
+                   displayName="Test Files"
+                   projectFiles="false"
+                   kind="TEST_LOGICAL_FOLDER">
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <sourceRootList>
+    <Elem>.</Elem>
+  </sourceRootList>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Release" type="2">
+      <toolsSet>
+        <compilerSet>arm-linux-gnueabihf|GNU</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <developmentMode>5</developmentMode>
+          <standard>3</standard>
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>../am335x/app_loader/include</pElem>
+          </incDir>
+          <commandLine>-g -W -Wall -mtune=cortex-a8 -march=armv7-a</commandLine>
+          <preprocessorList>
+            <Elem>_DEFAULT_SOURCE</Elem>
+          </preprocessorList>
+          <warningLevel>2</warningLevel>
+        </cTool>
+        <linkerTool>
+          <linkerLibItems>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../am335x/app_loader/prussdrv"
+                            CT="3"
+                            CN="Release"
+                            AC="true"
+                            BL="true"
+                            WD="../am335x/app_loader/prussdrv"
+                            BC="${MAKE}  -f Makefile CONF=Release"
+                            CC="${MAKE}  -f Makefile CONF=Release clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libprussdrv.a">
+              </makeArtifact>
+            </linkerLibProjectItem>
+          </linkerLibItems>
+          <commandLine>--sysroot=/home/anthony/arm-linux-gnueabihf/sysroot</commandLine>
+        </linkerTool>
+        <requiredProjects>
+          <makeArtifact PL="../am335x/app_loader/prussdrv"
+                        CT="3"
+                        CN="Release"
+                        AC="true"
+                        BL="true"
+                        WD="../am335x/app_loader/prussdrv"
+                        BC="${MAKE}  -f Makefile CONF=Release"
+                        CC="${MAKE}  -f Makefile CONF=Release clean"
+                        OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libprussdrv.a">
+          </makeArtifact>
+          <makeArtifact PL="../am335x/pasm"
+                        CT="1"
+                        CN="Release"
+                        AC="true"
+                        BL="true"
+                        WD="../am335x/pasm"
+                        BC="${MAKE}  -f pasm-Makefile.mk CONF=Release"
+                        CC="${MAKE}  -f pasm-Makefile.mk CONF=Release clean"
+                        OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/pasm">
+          </makeArtifact>
+        </requiredProjects>
+      </compileType>
+      <item path="config.c" ex="false" tool="0" flavor2="3">
+      </item>
+      <item path="fixed-font.c" ex="false" tool="0" flavor2="3">
+      </item>
+      <item path="include/bitpattern.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/ledscape.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/pru.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/util.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/ws281x.hp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ledscape.c" ex="false" tool="0" flavor2="3">
+      </item>
+      <item path="pru.c" ex="false" tool="0" flavor2="3">
+      </item>
+      <item path="resource/matrix.p" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="resource/ws281x.p" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="util.c" ex="false" tool="0" flavor2="3">
+      </item>
+    </conf>
+    <conf name="Debug" type="3">
+      <toolsSet>
+        <compilerSet>arm-linux-gnueabihf|GNU</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <standard>3</standard>
+          <incDir>
+            <pElem>include</pElem>
+          </incDir>
+          <commandLine>-g -W -Wall -mtune=cortex-a8 -march=armv7-a</commandLine>
+          <preprocessorList>
+            <Elem>_DEFAULT_SOURCE</Elem>
+          </preprocessorList>
+          <warningLevel>2</warningLevel>
+        </cTool>
+        <archiverTool>
+        </archiverTool>
+      </compileType>
+      <item path="config.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="fixed-font.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="include/bitpattern.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/ledscape.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/pru.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/util.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/ws281x.hp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ledscape.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="pru.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="resource/matrix.p" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="resource/ws281x.p" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="util.c" ex="false" tool="0" flavor2="0">
+      </item>
+    </conf>
+    <conf name="Release_Static" type="3">
+      <toolsSet>
+        <compilerSet>arm-linux-gnueabihf|GNU</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <developmentMode>5</developmentMode>
+          <standard>3</standard>
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>../am335x/app_loader/include</pElem>
+          </incDir>
+          <commandLine>-g -W -Wall -mtune=cortex-a8 -march=armv7-a</commandLine>
+          <preprocessorList>
+            <Elem>_DEFAULT_SOURCE</Elem>
+          </preprocessorList>
+          <warningLevel>2</warningLevel>
+        </cTool>
+        <ccTool>
+          <developmentMode>5</developmentMode>
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>../am335x/app_loader/include</pElem>
+          </incDir>
+          <commandLine>-g -W -Wall -mtune=cortex-a8 -march=armv7-a</commandLine>
+          <preprocessorList>
+            <Elem>_DEFAULT_SOURCE</Elem>
+          </preprocessorList>
+          <warningLevel>2</warningLevel>
+        </ccTool>
+        <archiverTool>
+        </archiverTool>
+        <requiredProjects>
+          <makeArtifact PL="../am335x/app_loader/prussdrv"
+                        CT="3"
+                        CN="Release"
+                        AC="true"
+                        BL="true"
+                        WD="../am335x/app_loader/prussdrv"
+                        BC="${MAKE}  -f Makefile CONF=Release"
+                        CC="${MAKE}  -f Makefile CONF=Release clean"
+                        OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libprussdrv.a">
+          </makeArtifact>
+          <makeArtifact PL="../am335x/pasm"
+                        CT="1"
+                        CN="Release"
+                        AC="true"
+                        BL="true"
+                        WD="../am335x/pasm"
+                        BC="${MAKE}  -f pasm-Makefile.mk CONF=Release"
+                        CC="${MAKE}  -f pasm-Makefile.mk CONF=Release clean"
+                        OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/pasm">
+          </makeArtifact>
+        </requiredProjects>
+      </compileType>
+      <item path="config.c" ex="false" tool="0" flavor2="3">
+      </item>
+      <item path="fixed-font.c" ex="false" tool="0" flavor2="3">
+      </item>
+      <item path="include/bitpattern.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/ledscape.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/pru.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/util.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/ws281x.hp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ledscape.c" ex="false" tool="0" flavor2="3">
+      </item>
+      <item path="pru.c" ex="false" tool="0" flavor2="3">
+      </item>
+      <item path="resource/matrix.p" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="resource/ws281x.p" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="util.c" ex="false" tool="0" flavor2="3">
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>
