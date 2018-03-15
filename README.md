@@ -11,25 +11,15 @@ c executables are compiled for use with the Xvfb script start-xvfb
 
 The BBB must have the pru(s) enabled by copying and extracting dtb > dts, edit, compile dts > dtb and reinsert:
 
-from LEDScape/dts/README.md
 Generate DTS from DTB:
 
-	dtc \
-		-I dtb \
-		-O dts \
-		-o ubuntu-`uname -r`.dts \
-		/boot/uboot/dtbs/am335x-boneblack.dtb
+	dtc -I dtb -O dts -o archlinux-`uname -r`.dts /boot/uboot/dtbs/am335x-boneblack.dtb
 
 Enable the PRU.  Change status from "disabled" to "okay"
 
 Generate DTB back from DTS:
 
-	dtc \
-		-O dtb \
-		-I dts \
-		-o /boot/uboot/dtbs/am335x-boneblack.dtb \
-		ubuntu-`uname -r`.dts
-
+	dtc -O dtb -I dts -o /boot/uboot/dtbs/am335x-boneblack.dtb archlinux-`uname -r`.dts
 
 ## Compilation
 
