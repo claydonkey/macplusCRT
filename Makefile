@@ -82,7 +82,7 @@ clean: .clean-post
 # Add your pre 'clean' code here...
 
 .clean-post: .clean-impl
-# Add your post 'clean' code here...
+	rm macvideo.bin eventmap macvideo x11mac
 
 
 # clobber
@@ -102,7 +102,11 @@ all: .all-post
 # Add your pre 'all' code here...
 
 .all-post: .all-impl
-# Add your post 'all' code here...
+	cp am335x/pasm/dist/Release/GNU-Linux/* . 
+	cp ledscape/dist/Release_Static/arm-linux-gnueabihf-Linux/* . 
+	cp dist/eventmap/arm-linux-gnueabihf-Linux/* . 
+	cp dist/macvideo/arm-linux-gnueabihf-Linux/* . 
+	cp dist/x11mac/arm-linux-gnueabihf-Linux/* . 
 
 
 # build tests
