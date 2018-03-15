@@ -38,4 +38,10 @@ start-xvfb
     Target 'all' will will build all configurations and, unless 'SUB=no',
         also build subprojects.
     Target 'help' prints this message.
+
+    Note: LOCAL + CROSS COMPILATION
+        make all SYSROOT=<your sysroot> CC=<your gcc compiler>
+        SYSROOT defaults to null and CC defaults to arm-linux-eabihf-gcc
+        i.e for local compilation use 'make all CC=gcc'
+	    cross-compilation use 'make all SYSROOT=/somepathtosysroot'
     

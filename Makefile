@@ -54,11 +54,11 @@ SLOT_FILE=slots
 DTS=CAPE-BONE-MAC
 DTB=/dtc/firmware/$(DTS)-00A0.dtbo
 
-firmware: $(DTB)
-	echo $(DTS) > $(SLOT_FILE)
+#firmware: $(DTB)
+#	echo $(DTS) > $(SLOT_FILE)
 
-$(DTB): cape-bone-mac.dts 
-	dtc -O dtb -o $@ -b 0 -@ $<
+#$(DTB): cape-bone-mac.dts 
+#	dtc -O dtb -o $@ -b 0 -@ $<
  
 
 #firmware:
@@ -127,6 +127,11 @@ test: .test-post
 
 # help
 help: .help-post
+	@echo	"Note: LOCAL + CROSS COMPILATION"
+	@echo	"   make all SYSROOT=<your sysroot> CC=<your gcc compiler>"
+	@echo   "   SYSROOT defaults to null and CC defaults to arm-linux-eabihf-gcc"
+	@echo	"   i.e for local compilation use 'make all CC=gcc'"
+	@echo	"	    cross-compilation use 'make all SYSROOT=/somepathtosysroot'"
 
 .help-pre:
 # Add your pre 'help' code here...
