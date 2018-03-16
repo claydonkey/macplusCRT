@@ -1,7 +1,6 @@
 # macplusCRT
 
-
-![alt text](https://github.com/claydonkey/macplusCRT/blob/master/MACCY.png","macplusCRT")
+![macplusCRT](https://github.com/claydonkey/macplusCRT/blob/master/MACCY.png "macplusCRT")
 
 A refactoring of Trammell Hudsons cool work using the BBB to render the single bit Macintosh display.
 Currently for use with cross-compiler arm-linux-gnueabihf
