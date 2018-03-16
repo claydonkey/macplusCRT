@@ -23,6 +23,10 @@ Enable the PRU.  Change status from "disabled" to "okay"
 Generate DTB back from DTS:
 
 	dtc -O dtb -I dts -o /boot/uboot/dtbs/am335x-boneblack.dtb archlinux-`uname -r`.dts
+	
+## Install Dependencies
+
+	sudo pacman -S xorg-xeyes xterm Xvfb
 
 ## Compilation
 
@@ -60,3 +64,7 @@ Generate DTB back from DTS:
         i.e for local compilation use 'make all CC=gcc'
 	    cross-compilation use 'make all SYSROOT=/somepathtosysroot'
     
+ ## Execute
+ 
+ 	./start-xvfb
+ 	
