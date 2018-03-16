@@ -24,10 +24,6 @@ Enable the PRU.  Change status from "disabled" to "okay"
 Generate DTB back from DTS:
 
 	dtc -O dtb -I dts -o /boot/uboot/dtbs/am335x-boneblack.dtb archlinux-`uname -r`.dts
-	
-## Dependencies
-
-	sudo pacman -S xorg-xeyes xTerm xorg-server-xvfb
 
 ## Compilation
 
